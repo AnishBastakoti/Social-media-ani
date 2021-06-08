@@ -1,2 +1,2 @@
-# Map of Nepal
-[Link for the site]("https://anishbastakoti.github.io/Map-of-Nepal/")
+# Social media Icons
+[Link for the site]["https://anishbastakoti.github.io/Scoial-media-ico/"]
