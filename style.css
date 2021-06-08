@@ -1,90 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import "styleprime.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3px 0;
-}
-
 body{
-    /*background: linear-gradient(to left, #1f2d1f, #585548);*/
-    background: #847373;
+  background: #555;
+  width: 100vw;
+  height: 100vh;
 }
-.nav{
-    width: 100%;
-    height: 69px;
-    border-radius: 25px;
-    justify-content: space-evenly;
+.main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  cursor: pointer;
 }
-.para{
-  padding: 10px 14px;
-  margin: 3px 0;
+.icon{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  border-radius: 50px;
+  transition: all .8s;
+}
+.icon:hover{
+  background: #e60073;
+  box-shadow: 0 0 20px #e60073;
+}
+.icon:hover:nth-child(2){
+  background: #1877f2;
+  box-shadow: 0 0 20px #1877f2;
+}
+.icon:hover:nth-child(3){
+  background: #000;
+  box-shadow: 0 0 20px #25d366;
+}
+.icon:hover:nth-child(4){
+  background: #0e76a8;
+  box-shadow: 0 0 20px #25d366;
+}
+.icon:hover:nth-child(5){
+  background: #1da1f2;
+  box-shadow: 0 0 20px #1da1f2;
+}
+.icon:hover:nth-child(6){
+  background: #FF5700;
+  box-shadow: 0 0 20px #1da1f2;
+}
+.icon i{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+svg circle{
+  stroke-dasharray: 10;
+  transition: all .8s;
+}
+.icon:hover svg circle{
+  stroke-dasharray: 220;
+}
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "Poppins", sans-serif;
+}
+.tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background-color: #000;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/*.search{
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
-  background-image: url('search.svg');
-  height: 31px;
-  background-repeat: no-repeat;
-
-}
-.search:hover{
-  background: #0b7dda;
-}
-.search::after{
-  content: "";
-  clear: both;
-  display: table;
-}*/
-.box{
-    flex-direction: column;
-    width: 66px;
-    height: 50px;
-    transition: all .4s;
-    border-radius: 10px;
-    font-size: 1rem;
-    position: relative;
-}
-.active{
-    box-shadow: 0 5px 10px rgba(21, 19, 19),0 1.9px 10px rgba(25, 23, 23);
-    border: 2px solid #f1f1f1;
-}
-.box input{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    -webkit-appearance: none;
-}
-.box i,.box p{
-    transition: all .4s;
-}
-.box p{
-    margin-top: 3px;
-    font-size: 0.7rem;
-}
-.box input:checked ~ i,
-.box input:checked ~ p{
-    color: #f1f1f1;
-    text-shadow: 0 0 30px #4a00e0de;
-}
-footer{
-  position: ;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
+.icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
 }
