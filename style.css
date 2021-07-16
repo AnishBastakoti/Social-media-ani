@@ -27,7 +27,42 @@ body{
   padding: 10px 14px;
   margin: 3px 0;
 }
+h1{
+  overflow: hidden;
+  border-right: .15em solid #555;
+  white-space: nowrap;
+  text-align: center;
+  margin: 10px;
+  letter-spacing: .15em;
+  color: #f1f1f1;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
 
+@keyframes typing {
+  from {width:0} to {width:100%}
+
+}
+.depth{
+  background-color: #524545;
+  border: 1px solid;
+  /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px, 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+  margin: 3% auto;
+  width: 70%;
+  box-shadow: -15px 11px 15px 7px rgb(0 0 0), 15px -11px 15px 0px;
+  border-radius: 12px;
+  border: 2px solid #f1f1f1;
+}
+#mypopup{
+  padding: 10px;
+  cursor: pointer;
+  width: 50%;
+  height: 10%;
+  background: #f1f1f1;
+  margin: 17px 0 17px 25%;
+  text-align: center;
+}
 /*.search{
   padding: 10px;
   font-size: 17px;
@@ -57,7 +92,7 @@ body{
     font-size: 1rem;
     position: relative;
 }
-.active{
+.on{
     box-shadow: 0 5px 10px rgba(21, 19, 19),0 1.9px 10px rgba(25, 23, 23);
     border: 2px solid #f1f1f1;
 }
